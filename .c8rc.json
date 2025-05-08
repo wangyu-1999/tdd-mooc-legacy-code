@@ -3,5 +3,5 @@
   "clean": true,
   "include": ["src"],
   "report-dir": "coverage/lcov-report",
-  "reporter": ["html", "text"]
+  "reporter": ["html", "text", "lcov"]
 }
