@@ -317,4 +317,28 @@ describe("Gilded Rose - Mutation", () => {
     expect(items[0].quality).to.equal(80);
   });
 
+  test("Aged Brie 1", () => {
+    const gildedRose = new Shop([new Item("Aged Brie", -1, 49)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].name).to.equal("Aged Brie");
+    expect(items[0].sellIn).to.equal(-2);
+    expect(items[0].quality).to.equal(50);
+  });
+
+  test("Aged Brie 2", () => {
+    const gildedRose = new Shop([new Item("Aged Brie", -1, 50)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].name).to.equal("Aged Brie");
+    expect(items[0].sellIn).to.equal(-2);
+    expect(items[0].quality).to.equal(50);
+  });
+
+  test("Aged Brie 3", () => {
+    const gildedRose = new Shop([new Item("Aged Brie", -1, 51)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].name).to.equal("Aged Brie");
+    expect(items[0].sellIn).to.equal(-2);
+    expect(items[0].quality).to.equal(51);
+  });
+
 });
