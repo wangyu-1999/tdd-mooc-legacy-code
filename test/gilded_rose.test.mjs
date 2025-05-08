@@ -67,6 +67,14 @@ describe("Gilded Rose", () => {
     expect(items[0].quality).to.equal(42);
   });
 
+  test("Backstage passes to a TAFKAL80ETC concert 8", () => {
+    const gildedRose = new Shop([new Item("Backstage passes to a TAFKAL80ETC concert", 20, 30)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].name).to.equal("Backstage passes to a TAFKAL80ETC concert");
+    expect(items[0].sellIn).to.equal(19);
+    expect(items[0].quality).to.equal(31);
+  });
+
   test("Aged Brie 1", () => {
     const gildedRose = new Shop([new Item("Aged Brie", -3, 20)]);
     const items = gildedRose.updateQuality();
@@ -81,5 +89,13 @@ describe("Gilded Rose", () => {
     expect(items[0].name).to.equal("Aged Brie");
     expect(items[0].sellIn).to.equal(9);
     expect(items[0].quality).to.equal(31);
+  });
+
+  test("Aged Brie 3", () => {
+    const gildedRose = new Shop([new Item("Aged Brie", 10, 60)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].name).to.equal("Aged Brie");
+    expect(items[0].sellIn).to.equal(9);
+    expect(items[0].quality).to.equal(60);
   });
 });
