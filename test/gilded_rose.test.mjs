@@ -11,6 +11,14 @@ describe("Gilded Rose", () => {
     expect(items[0].quality).to.equal(0);
   });
 
+  test("foo 2", () => {
+    const gildedRose = new Shop([new Item("foo", -3, 20)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].name).to.equal("foo");
+    expect(items[0].sellIn).to.equal(-4);
+    expect(items[0].quality).to.equal(18);
+  });
+
   test("Backstage passes to a TAFKAL80ETC concert 1", () => {
     const gildedRose = new Shop([new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20)]);
     const items = gildedRose.updateQuality();
