@@ -173,11 +173,19 @@ describe("Gilded Rose - Mutation", () => {
     expect(items[0].quality).to.equal(50);
   });
 
-  test("Backstage passes to a TAFKAL80ETC concert 6", () => {
+  test("Backstage passes to a TAFKAL80ETC concert 7", () => {
     const gildedRose = new Shop([new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49)]);
     const items = gildedRose.updateQuality();
     expect(items[0].name).to.equal("Backstage passes to a TAFKAL80ETC concert");
     expect(items[0].sellIn).to.equal(4);
+    expect(items[0].quality).to.equal(50);
+  });
+
+  test("Backstage passes to a TAFKAL80ETC concert 8", () => {
+    const gildedRose = new Shop([new Item("Backstage passes to a TAFKAL80ETC concert", 7, 49)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].name).to.equal("Backstage passes to a TAFKAL80ETC concert");
+    expect(items[0].sellIn).to.equal(6);
     expect(items[0].quality).to.equal(50);
   });
 
