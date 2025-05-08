@@ -341,4 +341,9 @@ describe("Gilded Rose - Mutation", () => {
     expect(items[0].quality).to.equal(51);
   });
 
+  test("null item", () => {
+    const gildedRose = new Shop();
+    expect(gildedRose.items.length).to.equal(0);
+  });
+
 });
