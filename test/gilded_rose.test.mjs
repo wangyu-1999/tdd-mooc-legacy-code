@@ -269,6 +269,14 @@ describe("Gilded Rose - Mutation", () => {
     expect(items[0].quality).to.equal(29);
   });
 
+  test("foo 5", () => {
+    const gildedRose = new Shop([new Item("foo", -1, 49)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].name).to.equal("foo");
+    expect(items[0].sellIn).to.equal(-2);
+    expect(items[0].quality).to.equal(47);
+  });
+
   test("Sulfuras, Hand of Ragnaros 1", () => {
     const gildedRose = new Shop([new Item("Sulfuras, Hand of Ragnaros", 1, 80)]);
     const items = gildedRose.updateQuality();
