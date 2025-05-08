@@ -75,6 +75,14 @@ describe("Gilded Rose", () => {
     expect(items[0].quality).to.equal(31);
   });
 
+  test("Backstage passes to a TAFKAL80ETC concert 9", () => {
+    const gildedRose = new Shop([new Item("Backstage passes to a TAFKAL80ETC concert", -2, 60)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].name).to.equal("Backstage passes to a TAFKAL80ETC concert");
+    expect(items[0].sellIn).to.equal(-3);
+    expect(items[0].quality).to.equal(0);
+  });
+
   test("Aged Brie 1", () => {
     const gildedRose = new Shop([new Item("Aged Brie", -3, 20)]);
     const items = gildedRose.updateQuality();
