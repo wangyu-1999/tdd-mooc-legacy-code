@@ -30,7 +30,7 @@ export class Shop {
         }
         this.items[i].sellIn = this.items[i].sellIn - 1;
         if (this.items[i].sellIn < 0) {
-          this.items[i].quality = this.items[i].quality - this.items[i].quality;
+          this.items[i].quality = 0;
         }
       }else if(this.items[i].name === "Aged Brie") {
         if (this.items[i].quality < 50) {
