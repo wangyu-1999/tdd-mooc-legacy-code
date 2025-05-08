@@ -205,6 +205,14 @@ describe("Gilded Rose - Mutation", () => {
     expect(items[0].quality).to.equal(21);
   });
 
+  test("Backstage passes to a TAFKAL80ETC concert 11", () => {
+    const gildedRose = new Shop([new Item("Backstage passes to a TAFKAL80ETC concert", 12, 20)]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].name).to.equal("Backstage passes to a TAFKAL80ETC concert");
+    expect(items[0].sellIn).to.equal(11);
+    expect(items[0].quality).to.equal(21);
+  });
+
   test("foo 1", () => {
     const gildedRose = new Shop([new Item("foo", 50, 0)]);
     const items = gildedRose.updateQuality();
