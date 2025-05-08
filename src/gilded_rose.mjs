@@ -52,7 +52,6 @@ export class Shop {
           }
         } else {
           if (this.items[i].quality < 50) {
-            console.log("here");
             this.items[i].quality = this.items[i].quality + 1;
           }
         }
